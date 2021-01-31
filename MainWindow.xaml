@@ -1,0 +1,187 @@
+﻿<Window x:Class="Simple_BAC_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Simple_BAC_Calculator"
+        mc:Ignorable="d"
+        Background="DarkMagenta"
+        Title="BAC Calculator" Height="450" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+
+        </Grid.RowDefinitions>
+        <Label
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Content="BAC Calculator" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            FontSize="24"
+            Foreground="MintCream"
+            FontWeight="Bold"/>
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="0"
+            Orientation="Vertical"
+            Background="MintCream">
+            <Image
+            Height="185"
+            Width="148"
+            Source="Images/background.jpg"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Orientation="Vertical">
+            <Button
+                 x:Name="Button_Help"
+                 Width="150"
+                 Height="40"
+                 Margin="0, 2, 0, 0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Content="Help"
+                 FontWeight="Bold"
+                 FontStyle="Italic"
+                 Background="DarkMagenta"
+                 Foreground="MintCream" Click="Button_Help_Click"/>
+            <Button
+                 x:Name="Button_Exit"
+                 Width="150"
+                 Height="50"
+                 Margin="0, 6, 0, 0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Content="Exit"
+                 FontWeight="Bold"
+                 FontStyle="Italic"
+                 Background="DarkMagenta"
+                 Foreground="MintCream" Click="Button_Exit_Click" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Orientation="Vertical">
+            <Label
+				Width="145"
+			    Height="30"
+				Margin="4"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Content="Body Weight (pounds):"
+                FontSize="12.3"
+				FontWeight="Bold"
+				Background="MintCream"
+				Foreground="DarkMagenta"/>
+            <Label
+				Width="145"
+				Height="30"
+				Margin="4"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				Content="Drinks Consumed:"
+                FontSize="14"
+				FontWeight="Bold"
+				Background="MintCream"
+				Foreground="DarkMagenta"/>
+            <RadioButton 
+				x:Name="RadioButton_Male"
+				Margin="15"
+				Content="Male"
+				FontSize="16"
+                Background="MintCream"
+				Foreground="MintCream" Checked="RadioButton_Male_Checked"/>
+            <RadioButton 
+				x:Name="RadioButton_Female"
+				Margin="15, 0, 15, 15"
+				Content="Female"
+				FontSize="16"
+				Foreground="MintCream" Checked="RadioButton_Female_Checked"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2"
+            Grid.Column="1"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Bottom"
+            Orientation="Vertical">
+
+            <Button
+                x:Name="Button_Calc_BAC"
+                Width="145"
+                Height="30"
+                Margin="4"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Content="Calculate BAC"
+                FontSize="14"
+                
+                FontWeight="Bold"
+                Background="MintCream"
+                Foreground="DarkMagenta" Click="Button_Calc_BAC_Click"/>
+            <Button
+                x:Name="Button_Clear"
+                Width="145"
+                Height="30"
+                Margin="4"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Content="Clear"
+                FontSize="14"
+                FontWeight="Bold"
+                Background="MintCream"
+                Foreground="DarkMagenta" Click="Button_Clear_Click"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="1"
+            Grid.Column="3"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Orientation="Vertical">
+            <TextBox
+                x:Name="TextBox_Weight"
+                Width="145"
+                Height="30"
+                Margin="4, 26, 4, 4"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                FontWeight="Bold"/>
+            <TextBox
+                x:Name="TextBox_Drinks"
+                Width="145"
+                Height="30"
+                Margin="4"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel
+            Grid.Row="3"
+            Grid.Column="3"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Orientation="Vertical">
+            <TextBox
+                x:Name="TextBox_Answer"
+                Width="150"
+                Height="75"
+                Margin="0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                FontWeight="Bold"
+                IsReadOnly="True"/>
+        </StackPanel>
+        </Grid>
+</Window>
