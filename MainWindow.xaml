@@ -183,5 +183,5 @@
                 FontWeight="Bold"
                 IsReadOnly="True"/>
         </StackPanel>
-        </Grid>
+    </Grid>
 </Window>
